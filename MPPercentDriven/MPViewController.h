@@ -10,7 +10,7 @@
 #import "MPPallaxLayout.h"
 #import "MPParallaxCollectionViewCell.h"
 
-@interface MPViewController : UIViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>{
+@interface MPViewController : UIViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate,MPParallaxCellDelegate>{
     
     UICollectionView *_collectionView;
     

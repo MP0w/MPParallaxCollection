@@ -7,6 +7,7 @@
 //
 
 #import "MPViewController.h"
+#import "MPTextReavealLabel.h"
 
 static NSString *kCell=@"cell";
 
@@ -48,43 +49,62 @@ static NSString *kCell=@"cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     MPParallaxCollectionViewCell* cell =  (MPParallaxCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
-    
-#if DEBUG
-    cell.imageView.backgroundColor=[UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
-#endif
 
     cell.image=[UIImage imageNamed:[NSString stringWithFormat:@"%li",(long)indexPath.item%5+1]];
+
+    cell.delegate=self;
     
-//    NSString *text;
-//    
-//    NSInteger index=choosed>=0 ? choosed : indexPath.row%5;
-//    
-//    switch (index) {
-//        case 0:
-//            text=@"DESERT\n hot";
-//            break;
-//        case 1:
-//            text=@"MOUNTAIN\n cold";
-//            break;
-//        case 2:
-//            text=@"BLAH\n warm";
-//            break;
-//        case 3:
-//            text=@"SUNSET\n red";
-//            break;
-//        case 4:
-//            text=@"AJACCIO\n beach";
-//            break;
-//        default:
-//            break;
-//            
-//    }
-//    
-//    cell.text=text;
+    NSString *text;
+
+    NSInteger index=indexPath.row%5;
+
+    switch (index) {
+        case 0:
+            text=@"THAT";
+            break;
+        case 1:
+            text=@"LOOKS";
+            break;
+        case 2:
+            text=@"PRETTY";
+            break;
+        case 3:
+            text=@"GOOD";
+            break;
+        case 4:
+            text=@"!!!!!";
+            break;
+        default:
+            break;
+            
+    }
+    
+    
+    // that shit just to not make dirty MPParallaxCollectionViewCell ... I add that only to demonstrate how to use the percent driven stuff
+    if (![cell viewWithTag:3838]) {
+        MPTextReavealLabel *label=[[MPTextReavealLabel alloc] initWithFrame:CGRectMake(20, 80+30*indexPath.row, 280, 160)];
+        label.tag=3838;
+        label.lineWidth=3;
+        [cell addSubview:label];
+        
+    }
+    
+    MPTextReavealLabel *label=(MPTextReavealLabel *)[cell viewWithTag:3838];
+    label.frame=CGRectMake(20, 80+30*indexPath.row, 280, 160);
+    label.attributedText=[[NSAttributedString alloc] initWithString:text attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor],NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-light" size:75]}];
+
+
     
     return cell;
 }
 
-
+- (void)cell:(MPParallaxCollectionViewCell *)cell changeParallaxValueTo:(CGFloat)value{
+    
+    NSLog(@"%f",value);
+    
+    MPTextReavealLabel *label=(MPTextReavealLabel *)[cell viewWithTag:3838];
+    CGFloat val=1-(value<0 ? -value : value);
+    [label drawToValue:val*val];
+}
 
 @end

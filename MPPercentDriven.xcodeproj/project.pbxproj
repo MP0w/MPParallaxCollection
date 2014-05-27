@@ -28,6 +28,7 @@
 		DED153E51934EF8800F910F2 /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DED153DC1934EF8800F910F2 /* 3@2x.png */; };
 		DED153E61934EF8800F910F2 /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DED153DD1934EF8800F910F2 /* 4@2x.png */; };
 		DED153E71934EF8800F910F2 /* 5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DED153DE1934EF8800F910F2 /* 5@2x.png */; };
+		DED153EF1934F83C00F910F2 /* MPTextReavealLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DED153EE1934F83C00F910F2 /* MPTextReavealLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		DED153DC1934EF8800F910F2 /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
 		DED153DD1934EF8800F910F2 /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
 		DED153DE1934EF8800F910F2 /* 5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5@2x.png"; sourceTree = "<group>"; };
+		DED153ED1934F83C00F910F2 /* MPTextReavealLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTextReavealLabel.h; sourceTree = "<group>"; };
+		DED153EE1934F83C00F910F2 /* MPTextReavealLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTextReavealLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +137,8 @@
 				DED153B01934ED0600F910F2 /* Main.storyboard */,
 				DED153B31934ED0600F910F2 /* MPViewController.h */,
 				DED153B41934ED0600F910F2 /* MPViewController.m */,
-				DED153D31934EDDA00F910F2 /* MPPallaxLayout.h */,
-				DED153D41934EDDA00F910F2 /* MPPallaxLayout.m */,
-				DED153D61934EE1F00F910F2 /* MPParallaxCollectionViewCell.h */,
-				DED153D71934EE1F00F910F2 /* MPParallaxCollectionViewCell.m */,
+				DED153F01934F83F00F910F2 /* text reveal */,
+				DED153EC1934F81D00F910F2 /* Classes */,
 				DED153B61934ED0600F910F2 /* Images.xcassets */,
 				DED153A51934ED0600F910F2 /* Supporting Files */,
 			);
@@ -184,6 +185,26 @@
 			);
 			path = img;
 			sourceTree = SOURCE_ROOT;
+		};
+		DED153EC1934F81D00F910F2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DED153D31934EDDA00F910F2 /* MPPallaxLayout.h */,
+				DED153D41934EDDA00F910F2 /* MPPallaxLayout.m */,
+				DED153D61934EE1F00F910F2 /* MPParallaxCollectionViewCell.h */,
+				DED153D71934EE1F00F910F2 /* MPParallaxCollectionViewCell.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DED153F01934F83F00F910F2 /* text reveal */ = {
+			isa = PBXGroup;
+			children = (
+				DED153ED1934F83C00F910F2 /* MPTextReavealLabel.h */,
+				DED153EE1934F83C00F910F2 /* MPTextReavealLabel.m */,
+			);
+			name = "text reveal";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -293,6 +314,7 @@
 				DED153B51934ED0600F910F2 /* MPViewController.m in Sources */,
 				DED153D81934EE1F00F910F2 /* MPParallaxCollectionViewCell.m in Sources */,
 				DED153AF1934ED0600F910F2 /* MPAppDelegate.m in Sources */,
+				DED153EF1934F83C00F910F2 /* MPTextReavealLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +521,7 @@
 				DED153CF1934ED0600F910F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DED153D01934ED0600F910F2 /* Build configuration list for PBXNativeTarget "MPPercentDrivenTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +530,7 @@
 				DED153D21934ED0600F910F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

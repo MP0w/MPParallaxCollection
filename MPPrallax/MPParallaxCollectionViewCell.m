@@ -36,11 +36,16 @@
     frame.origin.x=-MAX_HORIZONTAL_PARALLAX + parallaxValue*MAX_HORIZONTAL_PARALLAX;
     self.imageView.frame=frame;
     
+    if ([[self delegate] respondsToSelector:@selector(cell:changeParallaxValueTo:)]) {
+        [[self delegate] cell:self changeParallaxValueTo:parallaxValue];
+    }
     
 }
 
 
-
+- (void)dealloc{
+    self.delegate=nil;
+}
 
 
 
