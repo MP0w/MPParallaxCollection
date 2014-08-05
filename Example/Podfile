@@ -6,6 +6,4 @@ end
 
 target 'Tests', :exclusive => true do
   pod "MPParallaxCollection", :path => "../"
-  pod 'Specta', '~> 0.2.1'
-  pod 'Expecta'
 end
