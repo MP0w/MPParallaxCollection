@@ -8,7 +8,7 @@ But even thanks to the delegate useful to make cool percent driven effect, in th
 to show you how to use.
 
 
-[![CI Status](http://img.shields.io/travis/Alex Manzella/MPParallaxCollection.svg?style=flat)](https://travis-ci.org/Alex Manzella/MPParallaxCollection)
+[![CI Status](http://img.shields.io/travis/MP0w/MPParallaxCollection.svg?style=flat)](https://travis-ci.org/MP0w/MPParallaxCollection)
 [![Version](https://img.shields.io/cocoapods/v/MPParallaxCollection.svg?style=flat)](http://cocoadocs.org/docsets/MPParallaxCollection)
 [![License](https://img.shields.io/cocoapods/l/MPParallaxCollection.svg?style=flat)](http://cocoadocs.org/docsets/MPParallaxCollection)
 [![Platform](https://img.shields.io/cocoapods/p/MPParallaxCollection.svg?style=flat)](http://cocoadocs.org/docsets/MPParallaxCollection)
