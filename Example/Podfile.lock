@@ -1,0 +1,23 @@
+PODS:
+  - Expecta (0.3.1)
+  - MPParallaxCollection (0.1.0)
+  - MPTextReveal (0.1.0)
+  - Specta (0.2.1)
+
+DEPENDENCIES:
+  - Expecta
+  - MPParallaxCollection (from `../`)
+  - MPTextReveal
+  - Specta (~> 0.2.1)
+
+EXTERNAL SOURCES:
+  MPParallaxCollection:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  MPParallaxCollection: b697bfaafccb2fa3d1ac09613dca4cb030ab00e3
+  MPTextReveal: 29988b398eed444171ddb2b589307aabe27b99a7
+  Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
+
+COCOAPODS: 0.33.1

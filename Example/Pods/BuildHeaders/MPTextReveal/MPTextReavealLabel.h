@@ -1,0 +1,1 @@
+../../MPTextReveal/Classes/MPTextReavealLabel.h
